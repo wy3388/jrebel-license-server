@@ -216,7 +216,7 @@ public class HttpClientUtils {
             response = httpClient.execute(get);
             HttpEntity entity = response.getEntity();
             if (entity != null) {
-                result = EntityUtils.toString(entity);
+                result = EntityUtils.toString(entity).trim();
                 return result;
             }
         } catch (HttpHostConnectException e) {
